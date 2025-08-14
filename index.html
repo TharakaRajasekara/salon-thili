@@ -1,4 +1,139 @@
-<!DOCTYPE html>
+<section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>Rajasekara Motors<br>No 233/2, Unagalawehera</p>
+                </div>
+
+                <div class="contact-info fade-in">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:0702727059">070 272 7059</a></p>
+                </div>
+
+                <div class="contact-info fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Saturday<br>9:00 AM - 7:00 PM<br>Sunday: By Appointment</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/thilini.dhanushka.2025" target="_blank" title="Follow us on Facebook">
+                    <img src="images/logos/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/thilini9836?igsh=NXRpM3Bwc3l5bnVy" target="_blank" title="Follow us on Instagram">
+                    <img src="images/logos/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@thilini301?_t=ZS-8yrUkVC2R9T&_r=1" target="_blank" title="Follow us on TikTok">
+                    <img src="images/logos/tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://youtube.com/@salon_thili?si=rMu7eaGQlzSXVubF" target="_blank" title="Subscribe to our YouTube">
+                    <img src="images/logos/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://g.page/r/CUNpK_zLr35UEAE/review" target="_blank" title="Review us on Google">
+                    <img src="images/logos/google-reviews.png" alt="Google Reviews">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Salon Thili. All rights reserved. | Professional Beauty Services in Unagalawehera</p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to services function
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +141,35 @@
     <title>Salon Thili - Professional Beauty Services</title>
     <meta name="description" content="Salon Thili - Professional beauty services in Unagalawehera. Hair styling, makeup, skincare, and bridal packages. Book your appointment today!">
     <meta name="keywords" content="salon, beauty, hair, makeup, skincare, bridal, Unagalawehera, Sri Lanka">
+    
+    <!-- Favicon and Site Icons -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icons/android-chrome-512x512.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#e10582">
+    <meta name="msapplication-TileColor" content="#e10582">
+    <meta name="msapplication-config" content="images/icons/browserconfig.xml">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tharakarajasekara.github.io/salon-thili/">
+    <meta property="og:title" content="Salon Thili - Professional Beauty Services">
+    <meta property="og:description" content="Professional beauty services in Unagalawehera. Hair styling, makeup, skincare, and bridal packages.">
+    <meta property="og:image" content="https://tharakarajasekara.github.io/salon-thili/images/gallery/bridal-makeup-1.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tharakarajasekara.github.io/salon-thili/">
+    <meta property="twitter:title" content="Salon Thili - Professional Beauty Services">
+    <meta property="twitter:description" content="Professional beauty services in Unagalawehera. Hair styling, makeup, skincare, and bridal packages.">
+    <meta property="twitter:image" content="https://tharakarajasekara.github.io/salon-thili/images/gallery/bridal-makeup-1.jpg">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
@@ -69,6 +233,7 @@
         .logo img {
             height: 60px;
             width: auto;
+            border-radius: 10px;
         }
 
         .logo i {
@@ -86,10 +251,26 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--bright-magenta);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--bright-magenta);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .mobile-menu {
@@ -142,12 +323,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .cta-button {
@@ -161,11 +344,13 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(225, 5, 130, 0.3);
+            border: 2px solid transparent;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(225, 5, 130, 0.4);
+            border-color: var(--text-light);
         }
 
         /* Services Section */
@@ -182,6 +367,19 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--bright-magenta), var(--vivid-fuchsia));
+            border-radius: 2px;
         }
 
         .services-grid {
@@ -198,6 +396,23 @@
             box-shadow: 0 10px 30px rgba(141, 23, 89, 0.1);
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(225, 5, 130, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
         }
 
         .service-card:hover {
@@ -210,6 +425,11 @@
             font-size: 3rem;
             color: var(--bright-magenta);
             margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover i {
+            transform: scale(1.1);
         }
 
         .service-card h3 {
@@ -227,12 +447,17 @@
             color: var(--text-dark);
             position: relative;
             padding-left: 20px;
+            transition: color 0.3s ease;
         }
 
         .service-list li::before {
             content: '✨';
             position: absolute;
             left: 0;
+        }
+
+        .service-card:hover .service-list li {
+            color: var(--rich-purple);
         }
 
         /* Gallery Section */
@@ -304,12 +529,22 @@
             background: linear-gradient(135deg, var(--bg-light) 0%, #f0f0f0 100%);
             color: var(--rich-purple);
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .coming-soon:hover {
+            background: linear-gradient(135deg, #f0f0f0 0%, var(--bg-light) 100%);
         }
 
         .coming-soon i {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--bright-magenta);
+            transition: transform 0.3s ease;
+        }
+
+        .coming-soon:hover i {
+            transform: scale(1.1);
         }
 
         .coming-soon p {
@@ -322,12 +557,25 @@
             padding: 100px 0;
             background: linear-gradient(135deg, var(--deep-plum) 0%, var(--rich-purple) 100%);
             color: var(--text-light);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="80" r="1.5" fill="rgba(255,255,255,0.03)"/></svg>') repeat;
         }
 
         .about-content {
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .about h2 {
@@ -340,6 +588,7 @@
             font-size: 1.2rem;
             line-height: 1.8;
             margin-bottom: 2rem;
+            opacity: 0.9;
         }
 
         /* Contact Section */
@@ -361,17 +610,40 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(141, 23, 89, 0.1);
             text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(141, 23, 89, 0.15);
+            border-color: var(--bright-magenta);
         }
 
         .contact-info i {
             font-size: 3rem;
             color: var(--bright-magenta);
             margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info:hover i {
+            transform: scale(1.1);
         }
 
         .contact-info h3 {
             color: var(--rich-purple);
             margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--bright-magenta);
         }
 
         .social-links {
@@ -390,17 +662,24 @@
             transition: all 0.3s ease;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
         }
 
         .social-links a:hover {
             transform: scale(1.1) translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: var(--bright-magenta);
         }
 
         .social-links img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover img {
+            transform: scale(1.1);
         }
 
         /* Footer */
@@ -409,6 +688,17 @@
             color: var(--text-light);
             text-align: center;
             padding: 2rem 0;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--bright-magenta), var(--vivid-fuchsia), var(--bright-magenta));
         }
 
         /* Responsive Design */
@@ -464,6 +754,11 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
+
+            .social-links a {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -476,6 +771,10 @@
             }
 
             .service-card {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
                 padding: 1.5rem;
             }
         }
@@ -500,6 +799,7 @@
             transform: translateX(-50%);
             color: var(--text-light);
             animation: bounce 2s infinite;
+            cursor: pointer;
         }
 
         @keyframes bounce {
@@ -507,9 +807,83 @@
             40% { transform: translateX(-50%) translateY(-10px); }
             60% { transform: translateX(-50%) translateY(-5px); }
         }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark-burgundy) 0%, var(--rich-purple) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(225, 5, 130, 0.3);
+            border-top: 3px solid var(--bright-magenta);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--bright-magenta), var(--vivid-fuchsia));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(225, 5, 130, 0.3);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(225, 5, 130, 0.4);
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <header>
         <nav class="container">
             <a href="#" class="logo">
@@ -535,7 +909,7 @@
             <p>Where Beauty Meets Excellence</p>
             <a href="#contact" class="cta-button">Book Your Appointment</a>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" onclick="scrollToServices()">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
@@ -643,100 +1017,3 @@
             </div>
         </div>
     </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Visit Us</h3>
-                    <p>Rajasekara Motors<br>No 233/2, Unagalawehera</p>
-                </div>
-
-                <div class="contact-info fade-in">
-                    <i class="fas fa-phone"></i>
-                    <h3>Call Us</h3>
-                    <p><a href="tel:0702727059" style="color: var(--text-dark); text-decoration: none;">070 272 7059</a></p>
-                </div>
-
-                <div class="contact-info fade-in">
-                    <i class="fas fa-clock"></i>
-                    <h3>Opening Hours</h3>
-                    <p>Monday - Saturday<br>9:00 AM - 7:00 PM<br>Sunday: By Appointment</p>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.facebook.com/thilini.dhanushka.2025" target="_blank" title="Follow us on Facebook">
-                    <img src="images/logos/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/thilini9836?igsh=NXRpM3Bwc3l5bnVy" target="_blank" title="Follow us on Instagram">
-                    <img src="images/logos/instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.tiktok.com/@thilini301?_t=ZS-8yrUkVC2R9T&_r=1" target="_blank" title="Follow us on TikTok">
-                    <img src="images/logos/tiktok.png" alt="TikTok">
-                </a>
-                <a href="https://youtube.com/@salon_thili?si=rMu7eaGQlzSXVubF" target="_blank" title="Subscribe to our YouTube">
-                    <img src="images/logos/youtube.png" alt="YouTube">
-                </a>
-                <a href="https://g.page/r/CUNpK_zLr35UEAE/review" target="_blank" title="Review us on Google">
-                    <img src="images/logos/google-reviews.png" alt="Google Reviews">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Salon Thili. All rights reserved. | Professional Beauty Services in Unagalawehera</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-    </script>
-</body>
-</html>
