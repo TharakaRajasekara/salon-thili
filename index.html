@@ -374,6 +374,25 @@
             margin-bottom: 1rem;
         }
 
+        .location-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--bright-magenta), var(--vivid-fuchsia));
+            color: var(--text-light);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(225, 5, 130, 0.3);
+            margin-top: 1rem;
+        }
+
+        .location-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(225, 5, 130, 0.4);
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -652,6 +671,9 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Visit Us</h3>
                     <p>Rajasekara Motors<br>No 233/2, Unagalawehera</p>
+                    <a href="https://maps.app.goo.gl/Wk5pQaer2R8vAg8u8" target="_blank" class="location-button">
+                        <i class="fas fa-map"></i> View on Map
+                    </a>
                 </div>
 
                 <div class="contact-info fade-in">
